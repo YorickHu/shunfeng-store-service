@@ -1,8 +1,5 @@
 package com.gurume.api.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 
 /**
@@ -14,8 +11,6 @@ import javax.persistence.*;
  **/
 @Entity
 @Table(name = "rank")
-@Getter
-@Setter
 public class Rank {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -29,5 +24,43 @@ public class Rank {
 
     private Integer discount;
 
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
+    }
+
+    public String getNam() {
+        return nam;
+    }
+
+    public void setNam(String nam) {
+        this.nam = nam;
+    }
+
+    public Integer getThreshhold() {
+        return threshhold;
+    }
+
+    public void setThreshhold(Integer threshhold) {
+        this.threshhold = threshhold;
+    }
+
+    public Integer getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Integer discount) {
+        this.discount = discount;
+    }
 }

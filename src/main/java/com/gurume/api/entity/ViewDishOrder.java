@@ -1,7 +1,6 @@
 package com.gurume.api.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import jdk.nashorn.internal.objects.annotations.Setter;
 
 import javax.persistence.*;
 
@@ -14,8 +13,6 @@ import javax.persistence.*;
  **/
 @Entity
 @Table(name = "view_dish_order")
-@Getter
-@Setter
 public class ViewDishOrder {
 
     @Id
@@ -32,4 +29,51 @@ public class ViewDishOrder {
     private Integer orderId;
 
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getNam() {
+        return nam;
+    }
+
+    public void setNam(String nam) {
+        this.nam = nam;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public Integer getNum() {
+        return num;
+    }
+
+    public void setNum(Integer num) {
+        this.num = num;
+    }
+
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
+    }
 }

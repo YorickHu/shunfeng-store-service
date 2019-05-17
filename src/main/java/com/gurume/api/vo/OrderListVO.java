@@ -2,8 +2,6 @@ package com.gurume.api.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.List;
 
@@ -15,8 +13,6 @@ import java.util.List;
  * @Version 1.0
  **/
 @ApiModel(value="订单列表对象", description="订单列表")
-@Getter
-@Setter
 public class OrderListVO {
 
     @ApiModelProperty(value="页数", name="pageNum", example="2", required=true)
@@ -28,5 +24,27 @@ public class OrderListVO {
     @ApiModelProperty(value="菜品清单", name="dishes", example="", required=true)
     private List<OrderVO> orderVOS;
 
+    public String getPageNum() {
+        return pageNum;
+    }
 
+    public void setPageNum(String pageNum) {
+        this.pageNum = pageNum;
+    }
+
+    public String getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public List<OrderVO> getOrderVOS() {
+        return orderVOS;
+    }
+
+    public void setOrderVOS(List<OrderVO> orderVOS) {
+        this.orderVOS = orderVOS;
+    }
 }

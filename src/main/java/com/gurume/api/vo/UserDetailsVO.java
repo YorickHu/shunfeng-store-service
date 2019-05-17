@@ -2,8 +2,6 @@ package com.gurume.api.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * @ClassName UserDetailsVO
@@ -13,8 +11,6 @@ import lombok.Setter;
  * @Version 1.0
  **/
 @ApiModel(value="用户详情对象", description="下行返回id")
-@Getter
-@Setter
 public class UserDetailsVO {
 
     @ApiModelProperty(value="id", name="id", example="hyyy", required=false)
@@ -41,4 +37,67 @@ public class UserDetailsVO {
     @ApiModelProperty(value="消费总额", name="amount", example="1034.98")
     private String amount;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getLoginName() {
+        return loginName;
+    }
+
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
+    }
+
+    public String getRankName() {
+        return rankName;
+    }
+
+    public void setRankName(String rankName) {
+        this.rankName = rankName;
+    }
+
+    public String getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(String discount) {
+        this.discount = discount;
+    }
+
+    public String getAmount() {
+        return amount;
+    }
+
+    public void setAmount(String amount) {
+        this.amount = amount;
+    }
 }

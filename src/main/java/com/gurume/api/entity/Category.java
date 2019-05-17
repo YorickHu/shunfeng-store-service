@@ -1,8 +1,5 @@
 package com.gurume.api.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 
 /**
@@ -14,8 +11,6 @@ import javax.persistence.*;
  **/
 @Entity
 @Table(name = "category")
-@Getter
-@Setter
 public class Category {
 
     @Id
@@ -24,5 +19,19 @@ public class Category {
 
     private String nam;
 
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNam() {
+        return nam;
+    }
+
+    public void setNam(String nam) {
+        this.nam = nam;
+    }
 }

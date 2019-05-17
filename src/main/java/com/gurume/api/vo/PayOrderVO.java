@@ -2,8 +2,6 @@ package com.gurume.api.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.List;
 
@@ -15,8 +13,6 @@ import java.util.List;
  * @Version 1.0
  **/
 @ApiModel(value="支付下单请求", description="请求下单")
-@Getter
-@Setter
 public class PayOrderVO {
 
 
@@ -26,4 +22,19 @@ public class PayOrderVO {
     @ApiModelProperty(value="订单金额", name="amount", example="23.00", required=true)
     private Integer amount;
 
+    public Integer getOrderNo() {
+        return orderNo;
+    }
+
+    public void setOrderNo(Integer orderNo) {
+        this.orderNo = orderNo;
+    }
+
+    public Integer getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Integer amount) {
+        this.amount = amount;
+    }
 }

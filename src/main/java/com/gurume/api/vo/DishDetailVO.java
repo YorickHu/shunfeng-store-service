@@ -2,8 +2,6 @@ package com.gurume.api.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * @ClassName OrderDishDetailVO
@@ -13,8 +11,6 @@ import lombok.Setter;
  * @Version 1.0
  **/
 @ApiModel(value="菜品详情对象", description="菜品信息")
-@Getter
-@Setter
 public class DishDetailVO {
 
     @ApiModelProperty(value="菜品id", name="id", example="12312", required=true)
@@ -40,4 +36,68 @@ public class DishDetailVO {
 
     @ApiModelProperty(value="状态", name="status", example="true/false是否推荐")
     private boolean status;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getNum() {
+        return num;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getDescr() {
+        return descr;
+    }
+
+    public void setDescr(String descr) {
+        this.descr = descr;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getFlag() {
+        return flag;
+    }
+
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 }

@@ -2,9 +2,6 @@ package com.gurume.api.utils;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * @Description: 自定义响应数据结构
@@ -19,7 +16,6 @@ import lombok.Setter;
  */
 
 @ApiModel(description = "通用响应返回对象")
-@Data
 public class JSONResult<T> {
 
     @ApiModelProperty(value = "响应业务状态；200：成功；500：错误")
@@ -76,6 +72,27 @@ public class JSONResult<T> {
         this.data = data;
     }
 
+    public Integer getStatus() {
+        return status;
+    }
 
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
 
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
+    }
 }

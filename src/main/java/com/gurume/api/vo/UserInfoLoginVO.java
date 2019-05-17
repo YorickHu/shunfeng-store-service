@@ -2,8 +2,6 @@ package com.gurume.api.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * @ClassName UserInfo
@@ -13,8 +11,6 @@ import lombok.Setter;
  * @Version 1.0
  **/
 @ApiModel(value="用户登录对象", description="下行返回id")
-@Getter
-@Setter
 public class UserInfoLoginVO {
 
     @ApiModelProperty(value="id", name="id", example="hyyy", required=false)
@@ -26,4 +22,27 @@ public class UserInfoLoginVO {
     @ApiModelProperty(value="密码", name="pwd", example="123456", required=true)
     private String pwd;
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getLoginName() {
+        return loginName;
+    }
+
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
 }
